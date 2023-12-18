@@ -4,11 +4,18 @@ from telebot import TeleBot
 
 from handlers import list_available_commands, load_handlers
 
+from os import environ
+from dotenv import load_dotenv
+
+load_dotenv()
+
+TG_TOKEN = environ.get("TG_TOKEN")
+
 
 def main():
     # Init args
     parser = argparse.ArgumentParser()
-    parser.add_argument("tg_token", help="tg token")
+    parser.add_argument("tg_token", help="tg token", default=TG_TOKEN)
 
     # 'disable-command' option
     # The action 'append' will allow multiple entries to be saved into a list

@@ -4,3 +4,4 @@ github_poster
 prettymapp
 google-generativeai
 
+python-dotenv

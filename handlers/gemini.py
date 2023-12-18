@@ -6,6 +6,9 @@ import google.generativeai as genai
 from telebot import TeleBot
 from telebot.types import Message
 
+from dotenv import load_dotenv
+load_dotenv()
+
 GOOGLE_GEMINI_KEY = environ.get("GOOGLE_GEMINI_KEY")
 
 genai.configure(api_key=GOOGLE_GEMINI_KEY)
